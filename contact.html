@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+    <html>
+
+    <head>
+        <title>- My Personal Profile</title>
+
+        <link rel="stylesheet" href="style.css">
+       
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
+
+    </head>
+
+    <body>
+
+<section class="profile-info">
+
+    <h1>Contact Me</h1>
+
+    <nav>
+        <a class="nav-link" href="index1.html">Home</a> |
+        <a class="nav-link" href="about.html">About Me</a> |
+        <a class="nav-link" href="hobbies.html">Hobbies</a> |
+        <a class="nav-link" href="favorite.html">Favorites</a> |
+        <a class="nav-link" href="goals.html">Goals</a> |
+        <a class="nav-link" href="contact.html">Contact Me</a> |
+    </nav>
+
+    <hr>
+
+<p><b>Please fill out the form below to contact me:</b></p>
+
+    <form id="f" class="contact-form" onsubmit="sendEmail(event)">
+
+            <label class="form-label">Name:</label><br>
+            <input type="text" name="name" required>
+
+            <br><br>
+
+            <label class="form-label">Email Address:</label><br>
+            <input type="email" name="email" required>
+
+            <br><br>
+
+            <label class="form-label">Gender:</label><br>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+    
+            <br><br>
+
+            <label class="form-label" for="sexuality">Sexuality:</label><br>
+    <select id="sexuality" name="sexuality">
+        <option value="straight">Straight</option>
+        <option value="gay">Gay</option>
+        <option value="lesbian">Lesbian</option>
+        <option value="bisexual">Bisexual</option>
+        <option value="prefer-not-to-say">Prefer not to say</option>
+        <option value="other">Other</option>
+    </select>
+     
+    <br><br>
+
+<label class="form-label">Grade level & Strand:</label>
+            <select class="form-control" name="grade level & strand">
+            <option>ASHH CLUSTER 11</option>
+            <option>HUMMS 12</option>
+            <option>STEM CLUSTER 11</option>
+            <option>STEM 12</option>
+            <option>BNE CLUSTER 11</option>
+            <option>ABM 12</option>
+            <option>GAS CLUSTER 11</option>
+            <option>GAS 12</option>
+            <option>ICT CLUSTER 11</option>
+            <option>ICT 12</option>
+         </select>
+
+    <br><br>
+
+            <label class="form-label">Interests:</label><br>
+            <input type="checkbox" name="interest" value="Arts"> Arts
+            <input type="checkbox" name="interest" value="Drawing"> Drawing<br>
+            <input type="checkbox" name="interest" value="Dancing"> Dancing
+            <input type="checkbox" name="interest" value="Singing"> Singing<br>
+            <input type="checkbox" name="interest" value="Gaming"> Gaming
+            <input type="checkbox" name="interest" value="Sports"> Sports<br>
+            <input type="checkbox" name="interest" value="Cooking"> Cooking
+            <input type="checkbox" name="interest" value="Technology"> Technology<br>
+
+            <br>
+    
+            <label class="form-label">Purpose of Visit:</label><br>
+            <select name="purpose">
+                <option>General Inquiry</option>
+                <option>Feedback</option>
+                <option>Collaboration</option>
+                <option>School Project</option>
+                <option>Others</option>
+            </select>
+        
+        <br><br>
+
+            <label class="form-label">Message:</label><br>
+            <textarea name="message" rows="7" cols="50" required></textarea>
+
+        <p id=s></p>
+
+        <input type="hidden" name="title" value="Contact Me Form">
+        <input type="hidden" id=t name=time>
+
+    
+            <input class="btn primary" type="submit" value="Send Message">
+            <input class="btn primary" type="reset" value="Clear Form"><br><br>
+
+<label class="form-label">Before you go, am i cute?</label><br>
+            <input type="radio" name="yes" value="yes"> yes
+            <input type="radio" name="yes" value="yes"> absolutely
+            
+            <br><br>
+
+    <script>
+    emailjs.init({publicKey:"KUK4_2LJAC2j8W4Xo"})
+    sendEmail=e=>(e.preventDefault(),t.value=Date(),emailjs.sendForm("service_w8ei0bj","template_0ud8ufj",f).then(()=>{s.innerHTML="<font color=green>Successfully Sent!</font>";f.reset()}).catch(()=>s.innerHTML="<font color=red>Failed!</font>"))
+    </script>
+
+<a class="nav-link" href="index.html">Back to Homepage</a>
+
+ </form> </section>
+
+    </body>
+
+    </html>
