@@ -1,0 +1,63 @@
+/* Element Selectors */
+
+h1 {
+    text-align: center;
+    color:rgb(245, 248, 245);
+     background-color:pink;
+}
+
+h2 {
+    text-align: center;
+    color:palevioletred;
+}
+p {
+    text-align: center;
+}
+table {
+    margin: auto;
+}
+
+ol, ul {
+    width: fit-content;
+    margin: auto;
+}
+
+/* CLASS SELECTORS */
+
+.nav-link {
+    color:palevioletred;
+    font-weight: bolder;
+}
+.profile-info {
+    text-align: center;
+    font-weight: bold;
+}
+.form-label {
+    font-weight:bolder;
+    color:palevioletred;
+}
+.contact-form {
+     width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+/* ID SELECTORS */ 
+
+#main-header {
+    background-color: darksalmon;
+    text-align:center;
+}
+#contact-section {
+    background-color: black;
+}
+
+/* MULTIPLE CLASSES */
+
+.btn {
+    font-weight:bold
+}
+.primary {
+    color:rgb(253, 253, 253);
+    background-color:pink;
+}
